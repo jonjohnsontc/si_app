@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Find a Song - SongIndex{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <header>
+    <h3>Find Song IDs Here</h3>
+  </header>
+  <h5>Please provide the name of an artist (lowercase only)</h5>
+  <form action='' method='POST' novalidate>
+    {{ song_form.artist_name }} <br>
+    {{ song_form.submit }}
+  </form> 
+{% endblock %}

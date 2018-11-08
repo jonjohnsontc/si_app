@@ -1,0 +1,20 @@
+<!doctype html>
+<title>{% block title %} SongIndex {% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+  <h1>SongIndex</h1>
+</nav>
+<section class="content">
+  {% block content %}
+  <header>
+    <h3>Get Recommendations (Spotify Song ID Required)</h3>
+  </header>
+  <form action='' method='POST' novalidate>
+    {{ rec_form.song_id }} <br>
+    {{ rec_form.submit }}
+    <header>
+      <h3><a href="{{ url_for('home.find_song') }}">Get a Song ID First</a></h3>
+    </header>
+  </form>
+  {% endblock %}
+</section>
