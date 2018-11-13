@@ -51,8 +51,7 @@ def song_finder(song_list=main_song_list):
         return "Please try searching for another artist"
     else:
         return results.rename({'song_title':'Songs'}, axis=1).to_html()
-        # render_template('artist.html', results=results.rename({'song_title':'Songs'}, axis=1).to_html())
-        # results.rename({'song_title':'Song'}, axis=1).to_json(orient='columns')
+
     
 
 def feat_sim_da(song_id, k=10, song_db=main_song_list, cos_sim_mat=cos_sim_mat):

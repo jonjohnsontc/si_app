@@ -31,12 +31,6 @@ def create_app(test_config = None):
     def hello():
         return "Hello World!"
 
-    from . import artist_finder
-    app.register_blueprint(artist_finder.bp)
-
-    from . import recommend
-    app.register_blueprint(recommend.bp)
-
     from . import forms
 
     from . import home
